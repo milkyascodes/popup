@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup | blur effect</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="card" id="blur">
+        <div class="info">
+           <div>
+                <h1 class="title">Blur Pop-up</h1>
+                <p>This is a pop up modal project in which the baackground is going to have a blur effect once the modal is open .</p>
+                <button onclick="blurr()">Click Button</button>
+           </div>
+        </div>
+    </div>
+    <div id="popup" class="info">
+        <div>
+            <h1 class="title">Pop-up</h1>
+            <p>This is a the pop-up I was talking about. Thank you for checking it out ✌️.</p>
+            <button onclick="blurr()">Close</button>
+       </div>
+    </div>
+
+
+    <script>
+        function blurr(){
+        var blur = document.getElementById('blur')
+        blur.classList.toggle('active')
+        var popup = document.getElementById('popup')
+        popup.classList.toggle('popup')
+}
+    </script>
+</body>
+</html>

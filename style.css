@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    position:relative;
+}
+.card{
+    background: url('/car.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height:100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: steelblue;
+    transition: all .4s ease;
+}
+.card.active{
+    filter: blur(30px) brightness(90%);
+    pointer-events: none;
+    
+}
+
+/* text content */
+.info{
+    position: relative;
+    max-width: 21rem;
+    min-height: 10rem;
+    background: rgb(255, 255, 255);
+    padding: 1rem 0;
+    display: grid;
+    place-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+.info > div{
+    padding: 1rem;
+}
+.info p{
+    margin: 2rem 0 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+}
+.info button{
+    padding: .8rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+    background: steelblue;
+}
+
+
+/* popup */
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    min-width:20rem ;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease;
+    pointer-events: visible;
+    
+}
+#popup.popup{
+    visibility: visible;
+    opacity: 1;
+    top: 50%;
+}
